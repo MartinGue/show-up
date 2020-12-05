@@ -1,0 +1,74 @@
+Show-Up is a social-media Dapp with which you can upload and share images and appreciate posts by sending a 
+tip of 0.1 Ether to the best liked post/image.
+Posts will be ranked higher the more they have been tipped.The most tipped post will be on top of the page.
+
+With Showup it is possible to create posts with images and anchoring them forever on the blockchain and IPFS.
+These shared images are uncensorable, because their stored on the Ethereum blockchain and IPFS.
+The Ethereum-blockchain requires just a small network fee to achieve this immutable storage.
+
+The Showup smartcontract will have a reference of the image on IPFS, this reference
+is stored in each adress that has participated on the  ShowUp decentralized social network.
+
+The way its works in App.js : choose image-file => prepare the image-file for upload to IPFS
+=> put it in a buffer by using readArrayAsBuffer on the Image
+ =>upload the file to IPFS by calling the uploadImage function on the Showup contract => Store on the blockchain
+
+Directory structure : 
+
+on the top level there are several initialisation and instruction files:
+package.json (where the dependencies are specified to build the app) and the
+truffle-config.js (where the params live to initiate the truffle project correctly),
+.gitignore destins which files will not be shared on the git repository like the .env file
+Which contains the secret environment constants:
+- the private-key of the account that deploys the smartcontract to the network and 
+- an API-key to connect to Infura's endpoint 
+We get access via our Infura project-id called INFURA_API_KEY in the .env file
+so we can interact with the Ethereum blockchain or testnet. In this case the Kovan testnet.
+
+Next level down in the directory structure are the sub-directories that contain 
+migrations: where the the script files live that are needed to deploy the contracts. 
+node-Modules: all the dependencies that make the app work in Node.js.
+public: these are the files directly exposed to the outside world.
+src: contains several sub-directories one more level down, with: 
+    abi's: here live the json representations of the the smartcontracts 
+    components: here live the react-components that make up the diffentent part of the app
+    contracts: is the place where the Solidity smartcontacts live
+    index.js takes care of the highest level rendering in browser.
+test: here live the test-files that are called whenever running Truffle test
+
+How to build and run this project locally:
+Have Metamask browserwallet intalled in the browser.
+Have Truffle installed, 
+Have sort of an RPC intalled(virtual blockchain running on your computer) wether 
+Truffle rpc or Ganache cli or Ganache-gui.
+Have Node.js installed.
+
+Clone the git directory with the git clone command
+npm install in the project directory,
+Start a local instance of a blockchain, make note on which port this blockchain is running.
+Check truffle-config wether this is the same as in line 14 that says "port: ...." 
+change where needed truffle needs to talk to the test-chain on the same port.
+Use the truffle-config.js file in the settings(little cog top-right) for Ganache-Gui: workspace truffle projects
+Restart your rpc then
+truffle compile just to check wether your contract are compiling correctly.
+Then truffle migrate --reset to deploy the smartcontract to the local blockchain, you now 
+have a working smartcontract availabe to use in the frontend.
+
+Npm run start to start a local server to serve your frontend.
+
+Open the Metamask network-box(top-center) and create a new rpc networkname at random let's say "Ganache".
+complete the new RPC-URL box and use the parameters of Ganache and localhost3000:"port from ganache".
+You are now connected with your wallet to the local blockchain.
+
+Now we need access to the accounts on the local blockchain we do this by importing the privatekey 
+of the account(s) we want to use. 
+Back in Ganache_GUI we right click on the account-address and copy the privatekey into memory 
+and paste this into the Metamask 'import new account' menu item.
+You have now connected Metamask to your account on the local blockchain 
+and are able to interact with the Showup dapp.
+When you refresh the page on the top-right you can verifY wether the account you use in Metamask 
+is reflected  correctly in the ShowUp dapp.
+
+If you choose a picture from your computer and write a description below, you can the click upload button
+and a Metamask confirmation-screen pops up to pay the small networkfee and upload the image to IPFS
+and store its representation on the Ethereum blockchain forever.

@@ -1,0 +1,83 @@
+Starting migrations...
+======================
+> Network name:    'kovan'
+> Network id:      42
+> Block gas limit: 12500000 (0xbebc20)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x388e573a71b0946597e5c05bfde510548ab6baae7586e8af5b097b9805afd566
+   > Blocks: 1            Seconds: 8
+   > contract address:    0xdFD5D486eC867311f6212A731c7768E1664d24b1
+   > block number:        22405690
+   > block timestamp:     1606999120
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             5.99934153359
+   > gas used:            225237 (0x36fd5)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000225237 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 22405691)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.000225237 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Showup'
+   ------------------
+   > transaction hash:    0x043b324379e06753e7a2e03564c4146475a528404a0471107015ffca0a252ea1
+   > Blocks: 0            Seconds: 4
+   > contract address:    0x6722bd7F1caD3912c2141A122FB2bD579d51A0b3
+   > block number:        22405694
+   > block timestamp:     1606999140
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             5.99792048959
+   > gas used:            1378681 (0x150979)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001378681 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 22405695)
+
+   Deploying 'SafeMath'
+   --------------------
+   > transaction hash:    0xfb97d74fde88d467aa143445a4d1b46c01e3a7fb5912ef1ec17586ddb7c4619d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xBf75CceAD14eB78A72F4bAA02051590b6ccC2FE9
+   > block number:        22405697
+   > block timestamp:     1606999152
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             5.99784877559
+   > gas used:            71714 (0x11822)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000071714 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 22405698)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.001450395 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.001675632 ETH
