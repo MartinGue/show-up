@@ -1,0 +1,160 @@
+d:\dev\consensys\show-up>truffle migrate --network ropsten
+
+Compiling your contracts...
+===========================
+> Compiling .\src\contracts\Ownable.sol
+> Compiling .\src\contracts\SafeMath.sol
+> Compiling .\src\contracts\Showup.sol
+> Artifacts written to d:\dev\consensys\show-up\src\abis
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'ropsten-fork'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        9203541
+   > block timestamp:     1607203392
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.875198660793635467
+   > gas used:            210237 (0x3353d)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000210237 ETH
+
+   -------------------------------------
+   > Total cost:         0.000210237 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Showup'
+   ------------------
+   > block number:        9203543
+   > block timestamp:     1607203406
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.873841089793635467
+   > gas used:            1330208 (0x144c20)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001330208 ETH
+
+
+   Deploying 'SafeMath'
+   --------------------
+   > block number:        9203544
+   > block timestamp:     1607203413
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.873769375793635467
+   > gas used:            71714 (0x11822)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000071714 ETH
+
+   -------------------------------------
+   > Total cost:         0.001401922 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.001612159 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'ropsten'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x1aa39f71654b402856b56fe48f803776f0ee937ee92380aa79b1cc0cf7af9dfb
+   > Blocks: 3            Seconds: 68
+   > contract address:    0x2A5E0293A3777C297874Ff8416fD6112b95035AD
+   > block number:        9203546
+   > block timestamp:     1607203470
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.875183660793635467
+   > gas used:            225237 (0x36fd5)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000225237 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 9203547)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.000225237 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Showup'
+   ------------------
+   > transaction hash:    0x2e055bfac4f8098d10c6d90cc1708b8f726538dd24e3b7b735f1668ed64dd72b
+   > Blocks: 1            Seconds: 72
+   > contract address:    0x62aece73123a3f7C386c8464293bc296e4e7ff5d
+   > block number:        9203550
+   > block timestamp:     1607203523
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.873755289793635467
+   > gas used:            1386008 (0x152618)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001386008 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 9203551)
+
+   Deploying 'SafeMath'
+   --------------------
+   > transaction hash:    0xd30aa2be010c52f9e0b85d95bd26dea9bcc229c2fc5ccc49c442c17d057ddcd8
+   > Blocks: 2            Seconds: 8
+   > contract address:    0xb0cB50A7b44B647A4276a6d8dA1e4e4b1A009974
+   > block number:        9203553
+   > block timestamp:     1607203618
+   > account:             0x8aa9085eC8119e01BcbF8Ad57853075104AF834e
+   > balance:             1.873683575793635467
+   > gas used:            71714 (0x11822)
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000071714 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 9203554)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.001457722 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.001682959 ETH

@@ -3,6 +3,7 @@ require('babel-polyfill');
 
 require('dotenv').config();
 const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
+//const HDWalletProvider = require('@truffle/hdwallet-provider-privkey');
 let privateKeys = process.env.PRIVATE_KEYS || ""
 // Array of account private keys
 
@@ -37,6 +38,30 @@ module.exports = {
       gasPrice: 1000000000,//what does gas cost 
       confirmations: 1,
       network_id: "4"
+    },
+    ropsten: {
+      provider: function() {
+        return new HDWalletProvider(
+          privateKeys.split(','),
+          `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`
+        )
+      },
+      gas: 5000000,// how much gas do you need at ethgasstation.info
+      gasPrice: 1000000000,//what does gas cost 
+      confirmations: 1,
+      network_id: "3"
+    },
+    live: {
+      provider: function() {
+        return new HDWalletProvider(
+          privateKeys.split(','),
+          `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`
+        )
+      },
+      gas: 5000000,// how much gas do you need at ethgasstation.info
+      gasPrice: 1000000000,//what does gas cost 
+      confirmations: 1,
+      network_id: "1"
     }
 
   },

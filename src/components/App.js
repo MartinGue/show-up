@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
 //import './App.css';
+import { ethers } from 'ethers'
 import Showup from '../abis/Showup.json'
 import Navbar from './Navbar'
 import Main from './Main'
@@ -87,9 +88,12 @@ uploadImage = description => {
     this.setState({ loading: true })
     this.state.showup.methods.uploadImage(result[0].hash, description).send({ from: this.state.account })
     .on('transactionHash', (hash) => {
-    this.setState({ loading: false })  
-  })    
+      this.setState({ loading: false });
+    
+   
   })
+  })    
+  
   
 }
 tipImageOwner(id, tipAmount) {
