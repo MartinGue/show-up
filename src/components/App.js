@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
-//import './App.css';
-import { ethers } from 'ethers'
 import Showup from '../abis/Showup.json'
 import Navbar from './Navbar'
 import Main from './Main'
